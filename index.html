@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Warframe Reliquary
+	</title>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+	<meta name='description' content='A prime wishlist, relic planning, and fissure tracking tool for Warframe'>
+	<link rel='stylesheet' href='/css/core.css'/>
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Noto+Sans'>
+	<script src='/js/localization.enUS.js'></script>
+	<script src='/js/app.js' async='true'></script>
+	
+</head>
+<body>
+	<header>
+		<nav id='nav' class='button-set'>
+			<div key='wishlist'>Wishlist</div>
+			<div key='inventory' class='disabled hidden'>Inventory</div>
+			<div key='reliquary'>Reliquary</div>
+			<div key='codex' class='disabled hidden'>Codex</div>
+			<div key='welcome' class='active'>Welcome</div>
+		</nav>
+		<div id='settings' class='fade-out'>
+			<div id='themes' class='button-set'>
+				<div key='light'>Light</div>
+				<div key='dark'>Dark</div>
+				<div key='urng'>Urng</div>
+			</div>
+			<div id='platforms' class='button-set'>
+				<div key='pc'>pc</div>
+				<div key='xb1'>xb1</div>
+				<div key='ps4'>ps4</div>
+			</div>
+			<div id='locales' class='button-set'><div><a href='?locale=enUS'><img src='icons/flags/us.png'/></a></div><div><a href='?locale=ptBR'><img src='icons/flags/br.png'/></a></div><div><a href='?locale=frFR'><img src='icons/flags/fr.png'/></a></div><div><a href='?locale=ruRU'><img src='icons/flags/ru.png'/></a></div></div>
+		</div>
+		<div id='tokeninfo' class='hidden fade-out'>
+			<form key='form'>
+				<input type='text' key='name' placeholder='Nickname' name='name'>
+				<input type='button' key='save' value='Create with nickname'> 
+			</form>
+			<div class='name'></div>
+			<div class='token'>
+				<div class='private'>
+					<a key='link'></a>
+				</div>
+				<div class='public'>
+					<a key='link' target='_blank'></a>
+				</div>
+				<div><a href='/#wishlist' target='_blank'>New</a></div>
+			</div>
+		</div>
+	</header>
+	<div id='content'>
+		<div class='welcome active'>
+			<div class='info-panel blue'>Recent Prime Access: <a href='/MiragePrimeAccess'>Mirage Prime Access</a>, <a href='/HydroidPrimeAccess'>Hydroid Prime Access</a>, <a href='/OberonPrimeAccess'>Oberon Prime Access</a>, <a href='/BansheePrimeAccess'>Banshee Prime Access</a></div>
+			<div class='info-panel blue'>Soon to be vaulted Prime Access: <a href='/VaubanPrimeAccess'>Vauban Prime Access</a></div>
+			<div class='info-panel red'>Since the Reliquary does not yet account for bounty drops, the Prime Unvaulting relics will not be shown. Please refer to another resource for them.</div>
+						<h1>Welcome to the Warframe Reliquary</h1>
+			<p>This is a prime wishlist, relic planning, and fissure tracking tool for Warframe</p>
+			<p>To get started, check a couple items on the <strong>Wishlist</strong> tab, then go to the <strong>Reliquary</strong> tab to see all the relevant information. <strong>Saving</strong> your wishlist is not necessary, but please read below for more information.</p>
+			<div class='sections'>
+				<div>
+					<h3>Wishlist tracking</h3>
+					<p>You can check any item on the Wishlist page to mark it as wanted.</p>
+					<p>You can save your wishlist to gain extra functionality.</p>
+					<p>Vaulted items will be listed in red.</p>
+				</div>
+				<div>
+					<h3>Relic planning</h3>
+					<p>Relics containing any wishlisted items will be shown on the Reliquary page.</p>
+					<p>A list of starmap location groups currently know to reward these relics will be shown below the relic list. Hover or press on a group to see all the locations included.</p>
+					<p>Groups highlighted in gold currently have a fissure, and the fissure details will be listed at the bottom of the group.</p>
+				</div>
+				<div>
+					<h3>Wishlist saving</h3>
+					<p>While the wishlist can be used to plan your relic usage without being saved, saving it will generate two keys.</p>
+					<p>One private key, which you should bookmark for safekeeping. It will be labled <strong>"Bookmark"</strong>.<p>
+					<p>One public key, which you can share with your friends. It will be labeled <strong>"Share"</strong></p>
+				</div>
+				<div>
+					<h3>Wishlist sharing</h3>
+					<p>Once you and a friend have saved your wishlists, you can exchange public keys to include the data on eachother's reliquary pages.</p>
+					<p>Add any keys together with commas: <i>wf.xuerian.net/af62z,nb90f</i></p>
+				</div>
+				<div>
+					<h3>Relic system and rotations</h3>
+					<p>The upper section of the Reliquary page will show you what relics contain what items.</p>
+					<p>The lower section of the page will show you what drop tables contain the relics themselves. This is not connected opening the relics, only obtaining them.</p>
+					<p>Rotations A, B, and C are rewarded to you like so:</p>
+					<ul>
+						<li>A: 5/10 minutes, 5/10 waves, Excavator 1/2, Vault/Cache 1</li>
+						<li>B: 15 minutes, 15 waves, Excavator 3, Vault/Cache 2</li>
+						<li>C: 20 minutes, 20 waves, Excavator 4, Vault/Cache 3</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Known issues</h3>
+					<ul>
+						<li>This site may not function on your mobile device. Chrome or Firefox for mobile should work</li>
+						<li>This site may not function on an outdated browser</li>
+					</ul>
+				</div>
+				<div>
+					<h3><i>Where is X prime?</i></h3>
+					<p>This site uses data which is potentially out of date, depending on when the <a href='https://www.warframe.com/repos/hnfvc0o3jnfvc873njb03enrf56.html'>official drop tables</a> were last updated, and their accuracy.</p>
+				</div>
+				<div>
+					<h3>Translations</h3>
+					<p>ptBR: u/Nyrradley, frFR: u/MysterTroll, ruRU: u/mephasor</p>
+				</div>
+				<div>
+					<h3>Contact and feedback</h3>
+					<p>Recent changes are posted in the <a href='https://www.reddit.com/r/WarframeIntel'>subreddit</a>.</p>
+					<p>Post in the <a href='https://www.reddit.com/r/WarframeIntel/comments/6x3oha/issues_thread_2/'>issues</a> or <a href='https://www.reddit.com/r/WarframeIntel/comments/6x3ors/suggestions_thread_2/'>suggestions</a> threads</p>
+					<p>or <a href='https://www.reddit.com/message/compose/?to=Xuerian'>message me</a></p>
+				</div>
+				<div>
+					<h3>Localization</h3>
+					<p>If you would like to provide or update a localization for the site, please contact me with a translation of <a href='/localizations' rel='nofollow'>both enUS data sets</a>, or any that you want to update.</p>
+				</div>
+				<div>
+					<h3>Links</h3>
+					<ul>
+						<li><a href='https://notsosubtle.space/wf/'>Relic Explorer</a> - similar but more relic-focused tool</li>
+						<li><a href='https://warframe.market/'>Warframe Market</a> - unofficial driven buy/sell order site</li>
+						<li><a href='https://nexus-stats.com/'>Trade chat scraped statistics/price index</a></li>
+						<li><a href='https://www.wftrader.com/'>Warframe (Riven) Trader</a></li>
+						<li><a href='https://riven.market/'>Riven Market</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class='news'>
+				<h2>News and changes</h2>
+				<p>2018.1.12 - Added platform selection</p>
+				<p>2018.1.11 - Added themes</p>
+				<p>2017.11.7 - Vaulted items sorted to end of wishlist, warframes and sentinels prioritized</p>
+				<p>2017.11.3 - Vaulted items are faded, wishlist is aligned in horizontal rows instead of vertical columns,  information text is more clearly highlighted, links updated</p>
+				<p>2017.10.6 - Drop tables with mixed mission types have an * appended</p>
+				<p>2017.9.10 - Wiki links on wishlist</p>
+				<p>2017.9.7 - Data loss and short sharing links</p>
+			</div>
+		</div>
+		<div class='wishlist'>
+			<div class='saving info-panel blue'>The Reliquary can be used without saving or updating a wishlist, simply check or uncheck items and go to the Reliquary tab.<br/>When you do save your wishlist, make sure to bookmark the 'Bookmark' link so you can edit your list in the future.</div>
+			<div class='readonly info-panel red hidden'>This profile link is read-only. To switch to an empty, editable profile click 'New'</div>
+			<form key='form'>
+				<input class='save fade-out' type='button' value='Save wishlist'>
+				<div class='list box-container'>
+				</div>
+			</form>
+		</div>
+		<div class='inventory'>Nothing here yet</div>
+		<div class='reliquary'>
+			<div class='empty info-panel blue'>Relics will be shown here once you have added something to your wishlist (You do not have to save the wishlist first)</div>
+			<div class='legend'></div>
+			<div class='relics box-container'></div>
+			<div class='sources box-container'></div>
+			<div class='other_fissures'></div>
+		</div>
+		<div class='codex'>Nothing here yet</div>
+	</div>
+
+	<div id='templates'>
+		<div class='wish'>
+			<div class='item'>
+				<label key='label'>
+					<input key='check' type='checkbox'>
+					<span key='text'></span>
+				</label>
+			</div>
+			<div class='set box'>
+				<div key='header'>
+					<span class='name'></span>
+					<a class='wikilink' target='_blank' alt='Wiki page' rel='nofollow'>?</a>
+					<img class='type'/>
+				</div>
+				<div key='parts'></div>
+			</div>
+		</div>
+		<div class='nav'>
+			<!-- Legend -->
+			<div class='wanker'>
+				<div class='icon'></div>
+				<div class='name'></div>
+			</div>
+			<!-- Relic list -->
+			<div class='relic box'>
+				<div class='header'>
+					<div class='name'></div>
+					<div class='vaulted'></div>
+				</div>
+				<div class='details box'>
+					<div class='rewards'></div>
+					<div class='stock'>
+						<!--
+						<div>Stock:</div>
+						-->
+					</div>
+				</div>
+				<div class='rewards'></div>
+			</div>
+			<div class='reward'>
+				<div class='name'></div>
+				<div class='wankers'></div>
+				<div class='chance'></div>
+			</div>
+			<!-- Deck nav list -->
+			<div class='source box'>
+				<div class='header'>
+					<div class='name'></div>
+					<div class='average'></div>
+				</div>
+				<div class='details'>
+					<div class='nodes'></div>
+				</div>
+				<div class='rotations'></div>
+				<div class='fissures'></div>
+			</div>
+			<div class='rotation'>
+				<div class='header'>
+					<div class='name'></div>
+					<div class='chance'></div>
+				</div>
+				<div class='sets'></div>
+			</div>
+			<div class='set'>
+				<div class='relics'></div>
+				<div class='chance'></div>
+			</div>
+			<div class='node'>
+				<div class='planet'></div>
+				<div class='name'></div>
+				<div class='mode'></div>
+				<div class='faction'></div>
+			</div>
+			<div class='fissure'>
+				<div class='label'><span class='era'></span> - <span class='tier'></span> <span class='mode'></span> (<span class='faction'></span>)</div>
+				<div class='location'><span class='timer'></span>m - <span class='name'></span> (<span class='planet'></span>)</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
