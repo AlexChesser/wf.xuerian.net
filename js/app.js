@@ -1,6 +1,6 @@
 "use strict";
 
-var jsonRoot = "/wf.xuerian.net/json/";
+var siteroot = "/wf.xuerian.net";
 
 // We use more than Fetch, but it's an easy way to catch browsers that definitely won't work and get the attention of users who won't read the Welcome page before posting about the page not working
 if (typeof fetch === "undefined") {
@@ -77,7 +77,7 @@ var fetchJson = function fetchJson() {
 	});
 };
 var loadJsonCache = function loadJsonCache(filename) {
-	return fetchJson(jsonRoot + filename + ".json");
+	return fetchJson(siteroot + "/json/" + filename + ".json");
 };
 
 // Element helpers
@@ -802,7 +802,7 @@ loadJsonCache("wishlist").then(function (data) {
 				_set.classList.add("vaulted");
 			}
 			if (set.type) {
-				_set._header._type.src = "/icons/filters/" + set.type + ".png";
+				_set._header._type.src = siteroot + "/icons/filters/" + set.type + ".png";
 			}
 			set.parts.forEach(function (part) {
 				return _set._parts.appendChild(buildItem(part, set.name));

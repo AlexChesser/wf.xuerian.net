@@ -1,5 +1,5 @@
 "use strict"
-const jsonRoot = "/wf.xuerian.net/json/";
+const siteroot = "/wf.xuerian.net";
 
 // We use more than Fetch, but it's an easy way to catch browsers that definitely won't work and get the attention of users who won't read the Welcome page before posting about the page not working
 if (typeof fetch === "undefined") {
@@ -48,7 +48,7 @@ Object.defineProperty(Object.prototype, "forEach", {
 
 // Request helpers
 const fetchJson = (...args) => fetch(...args).then(response => response.json())
-const loadJsonCache = filename => fetchJson(jsonRoot+filename+".json")
+const loadJsonCache = filename => fetchJson(siteroot + "/json/" +filename+".json")
 
 // Element helpers
 const childAccessor = function(key) {
@@ -759,7 +759,7 @@ loadJsonCache("wishlist").then(data => {
 				_set.classList.add("vaulted")
 			}
 			if (set.type) {
-				_set._header._type.src = "/icons/filters/"+set.type+".png"
+				_set._header._type.src = siteroot + "/icons/filters/"+set.type+".png"
 			}
 			set.parts.forEach(part => _set._parts.appendChild(buildItem(part, set.name)))
 			list.appendChild(_set)
