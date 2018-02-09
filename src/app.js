@@ -1,4 +1,5 @@
 "use strict"
+const jsonRoot = "/wf.xuerian.net/json";
 
 // We use more than Fetch, but it's an easy way to catch browsers that definitely won't work and get the attention of users who won't read the Welcome page before posting about the page not working
 if (typeof fetch === "undefined") {
@@ -47,7 +48,7 @@ Object.defineProperty(Object.prototype, "forEach", {
 
 // Request helpers
 const fetchJson = (...args) => fetch(...args).then(response => response.json())
-const loadJsonCache = filename => fetchJson("/json/"+filename+".json")
+const loadJsonCache = filename => fetchJson(jsonRoot+filename+".json")
 
 // Element helpers
 const childAccessor = function(key) {

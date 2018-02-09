@@ -1,7 +1,8 @@
 "use strict";
 
-// We use more than Fetch, but it's an easy way to catch browsers that definitely won't work and get the attention of users who won't read the Welcome page before posting about the page not working
+var jsonRoot = "/wf.xuerian.net/json";
 
+// We use more than Fetch, but it's an easy way to catch browsers that definitely won't work and get the attention of users who won't read the Welcome page before posting about the page not working
 if (typeof fetch === "undefined") {
 	alert(document._L.error_unsupported_browser);
 	throw "UnsupportedBrowser";
@@ -76,7 +77,7 @@ var fetchJson = function fetchJson() {
 	});
 };
 var loadJsonCache = function loadJsonCache(filename) {
-	return fetchJson("/json/" + filename + ".json");
+	return fetchJson(jsonRoot + filename + ".json");
 };
 
 // Element helpers
